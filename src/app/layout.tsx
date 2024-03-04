@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const font = Roboto({ subsets: ["latin"], weight: "400" });
+const font = Roboto({ subsets: ["latin"], weight: "700" });
 
 export const metadata: Metadata = {
   title: "Onchain Clarity",
