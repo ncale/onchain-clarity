@@ -10,8 +10,18 @@ export default function Home() {
         . We&apos;d love to hear your ideas or feedback!
       </p>
       <div className="flex gap-6">
-        <ProjectCard name="GovScore" imgUrl="/based-friends-thumbnail.png" imgAlt="Gov Score Thumbnail" width={800} height={800} />
-        <ProjectCard name="BasedFriends" imgUrl="/based-friends-thumbnail.png" imgAlt="Based Friends Thumbnail" width={800} height={800} />
+        <ProjectCard 
+          name="GovScore" 
+          projLink="" 
+          imgUrl="/based-friends-thumbnail.png" 
+          imgAlt="Gov Score Thumbnail" 
+          width={800} height={800} />
+        <ProjectCard 
+          name="BasedFriends" 
+          projLink="https://basedfriends.xyz" 
+          imgUrl="/based-friends-thumbnail.png" 
+          imgAlt="Based Friends Thumbnail" 
+          width={800} height={800} />
       </div>
     </main>
   );
