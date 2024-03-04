@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
-      <body className={font.className}>
+      <body className={`${font.className} border-box`}>
         <Providers>
           <Header />
           {children}
