@@ -1,7 +1,14 @@
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+
 export default function Header() {
 	return (
-		<header className="flex h-20 bg-slate-300 items-center p-2">
-			<h1 className="text-5xl">Onchain Clarity</h1>
-		</header>
+		<Navbar>
+			<NavbarBrand>
+				<p className="text-inherit text-2xl font-bold">Onchain Clarity</p>
+			</NavbarBrand>
+			<NavbarContent>
+				{/* link structure placeholder */}
+			</NavbarContent>
+		</Navbar>
 	)
 }
