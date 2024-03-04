@@ -9,7 +9,10 @@ export default function Home() {
         <a href="https://warpcast.com/occ.eth" target="_blank" className="text-blue-500 hover:underline"> @occ.eth</a>
         . We&apos;d love to hear your ideas or feedback!
       </p>
-      <ProjectCard name="BasedFriends" imgUrl="/based-friends-thumbnail.png" imgAlt="" width={800} height={800} />
+      <div className="flex gap-6">
+        <ProjectCard name="GovScore" imgUrl="/based-friends-thumbnail.png" imgAlt="Gov Score Thumbnail" width={800} height={800} />
+        <ProjectCard name="BasedFriends" imgUrl="/based-friends-thumbnail.png" imgAlt="Based Friends Thumbnail" width={800} height={800} />
+      </div>
     </main>
   );
 }
