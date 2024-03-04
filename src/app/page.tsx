@@ -1,3 +1,5 @@
+import ProjectCard from "@/components/ProjectCard";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center gap-8 pt-10">
@@ -7,6 +9,7 @@ export default function Home() {
         <a href="https://warpcast.com/occ.eth" target="_blank" className="text-blue-500 hover:underline"> @occ.eth</a>
         . We&apos;d love to hear your ideas or feedback!
       </p>
+      <ProjectCard name="BasedFriends" imgUrl="/based-friends-thumbnail.png" imgAlt="" width={800} height={800} />
     </main>
   );
 }
