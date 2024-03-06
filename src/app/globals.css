@@ -7,6 +7,8 @@
 	min-width: 18%;
 	padding: 0 2rem;
 	border-right: 1px solid;
+	--tw-border-opacity: 1;
+  border-color: hsl(var(--nextui-divider) / var(--nextui-divider-opacity, var(--tw-border-opacity)));
 }
 
 .sidebar-item {
