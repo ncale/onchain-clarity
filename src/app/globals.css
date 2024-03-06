@@ -25,7 +25,7 @@
 	margin: 1rem 2rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	height: 100vh;
 	text-align: left;
 }
@@ -38,10 +38,6 @@
 	font-weight: 100;
 	font-size: large;
 	margin-bottom: 1rem;
-}
-
-.main-team {
-	align-items: flex-start;
 }
 
 .user-card {
