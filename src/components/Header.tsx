@@ -1,11 +1,12 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 
 export default function Header() {
 	return (
-		<Navbar>
+		<Navbar height="6rem" isBordered maxWidth="full">
 			<NavbarBrand>
-			<img src="/logo.png" alt="Logo" className="h-24 mr-4" />
-				<p className="text-inherit text-2xl font-bold">Onchain Clarity</p>
+				<Image src="/occ-logo.png" alt="Onchain clarity logo" height={80} className="h-28" />
+				<p className="text-inherit text-4xl font-extralight -ml-2">Onchain Clarity Co.</p>
 			</NavbarBrand>
 			<NavbarContent>
 				{/* link structure placeholder */}
