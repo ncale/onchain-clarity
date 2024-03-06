@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 
 const font = Roboto({ subsets: ["latin"], weight: ["700", "400"] });
@@ -22,13 +23,11 @@ export default function RootLayout({
       <body className={`${font.className} border-box`}>
         <Providers>
           <Header />
-
 					<div>
 						<Navbar />
 						{children}
 					</div>
-
-					
+					<Footer />
         </Providers>
       </body>
     </html>
