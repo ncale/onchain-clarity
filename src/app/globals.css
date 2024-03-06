@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar {
+	flex-grow: 0;
+	min-width: 18%;
+	padding: 0 2rem;
+	border-right: 1px solid;
+	--tw-border-opacity: 1;
+  border-color: hsl(var(--nextui-divider) / var(--nextui-divider-opacity, var(--tw-border-opacity)));
+}
+
+.sidebar-item {
+	margin-top: 1rem;
+	font-size: x-large;
+	font-weight: 100;
+}
+
+.sidebar-item > Link.active {
+  color: #36289f !important;
+  background: black !important;
+}
+
+.main {
+	flex-grow: 1;
+	margin: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 100vh;
+	text-align: left;
+}
+
+.main-text {
+	align-items: flex-start;
+}
+
+.main-text > p {
+	font-weight: 100;
+	font-size: large;
+	margin-bottom: 1rem;
+}
+
+.main-home {
+	align-items: center;
+}
+
+.user-card {
+	
+}
+
+.role-list {
+	list-style-type: disc;
+	margin-left: 1rem;
+}
+
+.role-list > li {
+	font-weight: 100;
+	font-size: small;
+}
+
+.footer {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 2rem;
+	bottom: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: inherit;
+}
