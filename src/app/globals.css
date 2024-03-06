@@ -4,7 +4,7 @@
 
 .sidebar {
 	flex-grow: 0;
-	width: 18%;
+	min-width: 18%;
 	padding: 0 2rem;
 	border-right: 1px solid;
 }
@@ -22,10 +22,22 @@
 
 .main {
 	flex-grow: 1;
-	margin: 0 0rem;
+	margin: 1rem 4rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100vh;
+	text-align: left;
+}
+
+.main-text {
+	align-items: flex-start;
+}
+
+.main-text > p {
+	font-weight: 100;
+	font-size: large;
+	margin-bottom: 1rem;
 }
 
 .footer {
