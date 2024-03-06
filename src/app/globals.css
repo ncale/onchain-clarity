@@ -40,6 +40,10 @@
 	margin-bottom: 1rem;
 }
 
+.main-team {
+	align-items: flex-start;
+}
+
 .user-card {
 	
 }

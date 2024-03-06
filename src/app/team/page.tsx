@@ -2,7 +2,7 @@ import UserCard from "@/components/UserCard";
 
 export default function Home() {
   return (
-    <main className="main">
+    <main className="main main-team">
 			<section className="grid grid-cols-2 gap-2 w-1/2">
 				<UserCard 
 					name="limes.eth"
