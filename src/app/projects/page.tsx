@@ -11,14 +11,14 @@ export default function Home() {
           name="GovScore"
 					desc={govScoreDesc}
           projLink="https://govscore.onchainclarity.co/delegates" 
-          imgUrl="/based-friends-thumbnail.png" 
+          imgUrl="/images/based-friends-thumbnail.png" 
           imgAlt="Gov Score Thumbnail" 
           width={800} height={800} />
         <ProjectCard 
           name="BasedFriends"
 					desc={basedFriendsDesc}
           projLink="https://basedfriends.xyz" 
-          imgUrl="/based-friends-thumbnail.png" 
+          imgUrl="/images/based-friends-thumbnail.png" 
           imgAlt="Based Friends Thumbnail" 
           width={800} height={800} />
       </section>
