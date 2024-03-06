@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 
-const font = Roboto({ subsets: ["latin"], weight: ["700", "400"] });
+const font = Roboto({ subsets: ["latin"], weight: ["100", "400", "700"] });
 
 export const metadata: Metadata = {
   title: "Onchain Clarity",
@@ -19,12 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="dark">
       <body className={`${font.className} border-box`}>
         <Providers>
           <Header />
-					<div>
-						<Navbar />
+					<div className="flex">
+						<Sidebar />
 						{children}
 					</div>
 					<Footer />

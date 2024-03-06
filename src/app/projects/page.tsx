@@ -2,7 +2,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
-    <main className="w-3/4 mx-auto flex flex-col items-center">
+    <main className="main">
       <div className="flex flex-col gap-4 mb-10 mt-4">
         <p className="text-center text-lg">
           We&apos;re creating open source solutions for bringing
