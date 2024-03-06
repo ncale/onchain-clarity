@@ -6,7 +6,7 @@ export default function Header() {
 		<Navbar height="6rem" isBordered maxWidth="full">
 			<NavbarBrand>
 				<Link href="/" className="flex items-center">
-					<Image src="/occ-logo.png" alt="Onchain clarity logo" height={80} className="h-28" />
+					<Image src="/images/occ-logo.png" alt="Onchain clarity logo" height={80} className="h-28" />
 					<p className="text-inherit text-4xl font-extralight -ml-2">Onchain Clarity Co.</p>
 				</Link>
 			</NavbarBrand>
