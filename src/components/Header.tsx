@@ -4,6 +4,7 @@ export default function Header() {
 	return (
 		<Navbar>
 			<NavbarBrand>
+			<img src="/logo.png" alt="Logo" className="h-24 mr-4" />
 				<p className="text-inherit text-2xl font-bold">Onchain Clarity</p>
 			</NavbarBrand>
 			<NavbarContent>
