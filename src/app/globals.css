@@ -40,6 +40,20 @@
 	margin-bottom: 1rem;
 }
 
+.user-card {
+	
+}
+
+.role-list {
+	list-style-type: disc;
+	margin-left: 1rem;
+}
+
+.role-list > li {
+	font-weight: 100;
+	font-size: small;
+}
+
 .footer {
 	position: fixed;
 	z-index: 1000;
