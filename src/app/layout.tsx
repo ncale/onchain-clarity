@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 
-const font = Roboto({ subsets: ["latin"], weight: ["100", "400", "700"] });
+const font = Roboto({ subsets: ["latin"], weight: ["100", "400"] });
 
 export const metadata: Metadata = {
   title: "Onchain Clarity",
