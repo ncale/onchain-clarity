@@ -20,7 +20,7 @@ export default function UserCard(props: {
 						<div>
 							<span className="leading-none block">{props.secondaryName}</span>
 							<div className="flex items-center gap-1 mt-0.5">
-								<a href={props.fcLink} className="flex items-center gap-1">
+								<a href={props.fcLink} target="_blank" className="flex items-center gap-1">
 									<Image
 										src={fcIcon}
 										alt="Farcaster icon"
@@ -28,7 +28,7 @@ export default function UserCard(props: {
 										/>
 										<span>Farcaster</span>
 								</a>
-								<a href={props.telegramLink} className="flex items-center gap-1">
+								<a href={props.telegramLink} target="_blank" className="flex items-center gap-1">
 									<Image
 										src={tgIcon}
 										alt="Telegram icon"

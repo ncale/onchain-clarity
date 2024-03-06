@@ -8,7 +8,7 @@ export default function SocialsCard(props: {
 	iconAlt: string
 }) {
 	return (
-		<a href={props.link}>
+		<a href={props.link} target="_blank">
 			<Card>
 				<CardBody>
 					<div className="flex items-center gap-3 pr-2 font-light">
