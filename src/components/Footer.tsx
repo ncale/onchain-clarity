@@ -2,8 +2,8 @@
 
 export default function Footer() {
 	return (
-		<footer>
-			footer
+		<footer className="footer">
+			<small>Onchain Clarity Co.</small>
 		</footer>
 	)
 }

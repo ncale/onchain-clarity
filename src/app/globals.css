@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 .sidebar {
+	flex-grow: 0;
 	width: 18%;
 	padding: 0 2rem;
 	border-right: 1px solid;
@@ -20,9 +21,21 @@
 }
 
 .main {
-	width: auto;
+	flex-grow: 1;
 	margin: 0 0rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.footer {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 2rem;
+	bottom: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: inherit;
 }
