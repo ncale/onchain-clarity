@@ -19,7 +19,7 @@ export default function UserCard(props: {
 					description={(
 						<div>
 							<span className="leading-none block">{props.secondaryName}</span>
-							<div className="flex items-center gap-1 mt-1">
+							<div className="flex items-center gap-1 mt-0.5">
 								<a href={props.fcLink} className="flex items-center gap-1">
 									<Image
 										src={fcIcon}
