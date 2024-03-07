@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="main main-text">
 			<p>
-				<span className="font-bold">Our mission:</span> to make Crypto multiplayer.
+				<span className="font-bold">Our mission:</span> Make Crypto multiplayer.
 			</p>
 			<p>
 				Blockchains are inherently open canvases, allowing anyone to 
