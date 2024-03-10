@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 
-const govScoreDesc = "A site that scores Optimism delegates based on transparency of identity, how consistently they vote, and how much voting power they currently have"
+const govScoreDesc = "Coming Soon!"
 const basedFriendsDesc = "Crypto's native friends list - BasedFriends uses the farcaster social graph to allow you to see, of your follows, who is recently online and recently onchain"
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
         <ProjectCard 
           name="GovScore"
 					desc={govScoreDesc}
-          projLink="https://govscore.onchainclarity.co/delegates" 
-          imgUrl="/images/based-friends-thumbnail.png" 
+          projLink="https://onchainclarity.co/projects" 
+          imgUrl="/images/gov-score-thumbnail.png" 
           imgAlt="Gov Score Thumbnail" 
           width={800} height={800} />
         <ProjectCard 
