@@ -11,8 +11,8 @@ export default function Sidebar() {
 	return (
 		<nav className="sidebar hidden md:flex">
 			<ul>
-				{menuLinks.map(( [name, path] ) => (
-					<li className="sidebar-item">
+				{menuLinks.map(([name, path], i) => (
+					<li className="sidebar-item" key={i}>
 						<Link href={path} className={currentPath === path ? "font-bold" : ""}>{name}</Link>
 					</li>
 				))}

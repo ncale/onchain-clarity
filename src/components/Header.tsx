@@ -32,8 +32,8 @@ function HamburgerMenu() {
 				<span><HamburgerIcon /></span>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="w-56">
-        {menuLinks.map(([name, path]) => (
-					<DropdownMenuItem>
+        {menuLinks.map(([name, path], i) => (
+					<DropdownMenuItem key={i}>
 						<Link href={path}>{name}</Link>
 					</DropdownMenuItem>
 				))}
