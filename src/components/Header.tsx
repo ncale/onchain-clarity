@@ -1,5 +1,13 @@
 import { Navbar, NavbarBrand, NavbarContent, Image } from "@nextui-org/react";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import HamburgerIcon from "./icons/hamburger-icon";
 
 export default function Header() {
 	return (
@@ -10,9 +18,34 @@ export default function Header() {
 					<p className="text-inherit text-4xl font-extralight -ml-2">Onchain Clarity Co.</p>
 				</Link>
 			</NavbarBrand>
-			<NavbarContent>
-				{/* link structure placeholder */}
+			<NavbarContent justify="end">
+				<HamburgerMenu />
 			</NavbarContent>
 		</Navbar>
 	)
 }
+
+function HamburgerMenu() {
+	return (
+		<DropdownMenu>
+			<DropdownMenuTrigger asChild>
+				<span><HamburgerIcon /></span>
+			</DropdownMenuTrigger>
+			<DropdownMenuContent className="w-56">
+				<DropdownMenuSeparator />
+        {menuLinks.map(([name, path]) => (
+					<DropdownMenuItem>
+						<Link href={path}>{name}</Link>
+					</DropdownMenuItem>
+				))}
+      </DropdownMenuContent>
+		</DropdownMenu>
+	)
+}
+
+export const menuLinks: Array<[string, `/${string}`]> = [
+	['About', '/about'],
+	['Projects', '/projects'],
+	['Team', '/team'],
+	['Socials', '/socials'],
+]
