@@ -1,9 +1,9 @@
-import UserCard from "@/components/UserCard";
+import UserCard from "./user-card";
 
 export default function Home() {
   return (
     <main className="main">
-			<section className="grid grid-cols-2 gap-2 w-1/2">
+			<section className="flex flex-wrap gap-2">
 				<UserCard 
 					name="limes.eth"
 					secondaryName="a.k.a. Dylan"

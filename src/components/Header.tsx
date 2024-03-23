@@ -11,11 +11,11 @@ import HamburgerIcon from "./icons/hamburger-icon";
 
 export default function Header() {
 	return (
-		<Navbar height="6rem" isBordered maxWidth="full">
+		<Navbar height="4rem" isBordered maxWidth="full">
 			<NavbarBrand>
 				<Link href="/" className="flex items-center">
-					<Image src="/images/occ-logo.png" alt="Onchain clarity logo" height={80} className="h-28" />
-					<p className="text-inherit text-4xl font-extralight -ml-2">Onchain Clarity Co.</p>
+					<Image src="/images/occ-logo.png" alt="Onchain clarity logo" height={80} className="h-20" />
+					<p className="text-inherit text-2xl md:text-3xl font-extralight -ml-2">Onchain Clarity Co.</p>
 				</Link>
 			</NavbarBrand>
 			<NavbarContent justify="end">
@@ -32,7 +32,6 @@ function HamburgerMenu() {
 				<span><HamburgerIcon /></span>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="w-56">
-				<DropdownMenuSeparator />
         {menuLinks.map(([name, path]) => (
 					<DropdownMenuItem>
 						<Link href={path}>{name}</Link>

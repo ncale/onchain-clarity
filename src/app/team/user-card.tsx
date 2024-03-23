@@ -1,7 +1,7 @@
 import {Card, CardBody, CardHeader, Divider, User } from "@nextui-org/react";
 import Image from "next/image";
-import fcIcon from "../../public/icons/fc-icon.svg";
-import tgIcon from "../../public/icons/tg-icon.svg";
+import fcIcon from "@/../public/icons/fc-icon.svg"
+import tgIcon from "@/../public/icons/tg-icon.svg";
 
 export default function UserCard(props: { 
 	name: string
@@ -12,7 +12,7 @@ export default function UserCard(props: {
 	roles: string[]
 }) {
 	return (
-		<Card className="user-card">
+		<Card className="w-80">
 			<CardHeader className="">
 				<User 
 					name={(<span className="leading-none text-lg">{props.name}</span>)}

@@ -9,7 +9,7 @@ export default function Sidebar() {
 	const currentPath = usePathname();
 	
 	return (
-		<nav className="sidebar">
+		<nav className="sidebar hidden md:flex">
 			<ul>
 				{menuLinks.map(( [name, path] ) => (
 					<li className="sidebar-item">
