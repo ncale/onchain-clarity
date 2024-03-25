@@ -1,15 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Image } from "@nextui-org/react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import HamburgerIcon from "./icons/hamburger-icon";
 import { NavbarItem } from "@nextui-org/react";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
@@ -41,16 +36,21 @@ function DesktopMenu() {
 }
 
 function HamburgerMenu() {
+  const [open, setOpen] = useState(false);
   const currentPath = usePathname();
   return (
-    <Drawer direction="top">
-      <DrawerTrigger>
+    <Drawer direction="top" open={open}>
+      <DrawerTrigger onClick={() => setOpen(true)}>
         <HamburgerIcon />
       </DrawerTrigger>
       <DrawerContent>
         <ul className="flex flex-col mt-6 gap-2">
           {menuLinks.map(([name, path], i) => (
-            <li className="text-3xl ml-4" key={i}>
+            <li
+              className="text-3xl ml-4"
+              key={i}
+              onClick={() => setOpen(false)}
+            >
               <Link
                 href={path}
                 color="foreground"
