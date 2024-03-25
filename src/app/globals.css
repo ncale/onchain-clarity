@@ -36,10 +36,10 @@
   }
 
   .dark {
-    --background: 220.86, 21.595%, 11.756%;
+    --background: 0, 0%, 7.1403%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 180, 0%, 11.852%;
     --card-foreground: 210 40% 98%;
 
     --popover: 222.2 84% 4.9%;
@@ -76,37 +76,37 @@
 }
 
 .main {
-	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	width: 95%;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 88%;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
-	.main {
-		width: 50rem;
-	}
+  .main {
+    width: 50rem;
+  }
 }
 
 .role-list {
-	list-style-type: disc;
-	margin-left: 1rem;
+  list-style-type: disc;
+  margin-left: 1rem;
 }
 
 .role-list > li {
-	font-weight: 100;
-	font-size: small;
+  font-weight: 100;
+  font-size: small;
 }
 
 .footer {
-	position: fixed;
-	z-index: 1000;
-	width: 100%;
-	height: 2rem;
-	bottom: 0;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	background-color: inherit;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: inherit;
 }
