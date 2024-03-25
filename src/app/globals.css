@@ -2,72 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-.sidebar {
-	flex-grow: 0;
-	min-width: 18%;
-	padding: 0 2rem;
-	border-right: 1px solid;
-	--tw-border-opacity: 1;
-  border-color: hsl(var(--nextui-divider) / var(--nextui-divider-opacity, var(--tw-border-opacity)));
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0, 0%, 7.1403%;
+    --foreground: 210 40% 98%;
+
+    --card: 180, 0%, 11.852%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
 }
 
-.sidebar-item {
-	margin-top: 1rem;
-	font-size: x-large;
-	font-weight: 100;
-}
-
-.sidebar-item > Link.active {
-  color: #36289f !important;
-  background: black !important;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 .main {
-	flex-grow: 1;
-	margin: 1rem 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	height: 100vh;
-	text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 88%;
+  height: 100vh;
 }
 
-.main-text {
-	align-items: flex-start;
-}
-
-.main-text > p {
-	font-weight: 100;
-	font-size: large;
-	margin-bottom: 1rem;
-}
-
-.main-home {
-	align-items: center;
-}
-
-.user-card {
-	
+@media (min-width: 768px) {
+  .main {
+    width: 50rem;
+  }
 }
 
 .role-list {
-	list-style-type: disc;
-	margin-left: 1rem;
+  list-style-type: disc;
+  margin-left: 1rem;
 }
 
 .role-list > li {
-	font-weight: 100;
-	font-size: small;
+  font-weight: 100;
+  font-size: small;
 }
 
 .footer {
-	position: fixed;
-	z-index: 1000;
-	width: 100%;
-	height: 2rem;
-	bottom: 0;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	background-color: inherit;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: inherit;
 }
