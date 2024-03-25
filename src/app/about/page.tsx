@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="main main-text">
+    <main className="main gap-4 pt-4 md:w-[32em]">
 			<p>
 				<span className="font-bold">Our mission:</span> Make Crypto multiplayer.
 			</p>
