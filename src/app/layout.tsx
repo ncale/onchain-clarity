@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 
@@ -24,7 +23,6 @@ export default function RootLayout({
         <Providers>
           <Header />
 					<div className="flex">
-						<Sidebar />
 						{children}
 					</div>
 					<Footer />
