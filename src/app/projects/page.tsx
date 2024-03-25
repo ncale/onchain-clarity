@@ -7,8 +7,8 @@ const basedFriendsDesc =
 
 export default function Home() {
   return (
-    <main className="main gap-4 pt-4">
-      <section className="flex flex-col gap-2">
+    <main className="main">
+      <section className="flex flex-col gap-4 pt-4">
         <ProjectCard
           name="GovScore"
           desc={govScoreDesc}
