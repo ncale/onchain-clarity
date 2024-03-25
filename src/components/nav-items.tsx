@@ -3,6 +3,7 @@
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Image } from "@nextui-org/react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +13,14 @@ import {
 import HamburgerIcon from "./icons/hamburger-icon";
 import { NavbarItem } from "@nextui-org/react";
 
-export default function NavLinks() {
+export function NavLogo() {
+	const isDesktop = useMediaQuery("(min-width: 768px)")
+	return (
+		isDesktop ? <Image src="/images/occ-logo.png" alt="Onchain clarity logo" height={80} className="h-16" /> : null
+	)
+}
+
+export function NavLinks() {
 	const isDesktop = useMediaQuery("(min-width: 768px)")
 	return (
 		isDesktop ? <DesktopMenu /> : <HamburgerMenu />
