@@ -1,4 +1,4 @@
-import SocialsCard from "@/components/SocialsCard";
+import SocialsCard from "./socials-card";
 import fcIcon from "../../../public/icons/fc-icon.svg";
 import pgIcon from "../../../public/icons/paragraph-icon.svg";
 

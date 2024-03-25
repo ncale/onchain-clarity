@@ -1,4 +1,4 @@
-import {Card, CardBody, CardHeader, Divider, User } from "@nextui-org/react";
+import {Card, CardBody } from "@nextui-org/react";
 import Image from "next/image";
 
 export default function SocialsCard(props: { 

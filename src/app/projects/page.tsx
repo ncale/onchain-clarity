@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "./project-card";
 
 const govScoreDesc = "The onchain score for finding optimal Optimism delegates - GovScore uses a delegate's voting history, voting power, and identity to craft a score that surfaces quality delegates to OP token holders looking to redelegate."
 const basedFriendsDesc = "Crypto's native friends list - BasedFriends uses the farcaster social graph to allow you to see, of your follows, who is recently online and recently onchain"
