@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import HamburgerIcon from "./icons/hamburger-icon";
 import { NavbarItem } from "@nextui-org/react";
+import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 
 export function NavLogo() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -40,23 +41,30 @@ function DesktopMenu() {
 }
 
 function HamburgerMenu() {
+  const currentPath = usePathname();
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <span>
-          <HamburgerIcon />
-        </span>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        {menuLinks.map(([name, path], i) => (
-          <DropdownMenuItem key={i}>
-            <Link href={path} className="text-xl w-full">
-              {name}
-            </Link>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Drawer direction="top">
+      <DrawerTrigger>
+        <HamburgerIcon />
+      </DrawerTrigger>
+      <DrawerContent>
+        <ul className="flex flex-col mt-6 gap-2">
+          {menuLinks.map(([name, path], i) => (
+            <li className="text-3xl ml-4" key={i}>
+              <Link
+                href={path}
+                color="foreground"
+                className={`${
+                  currentPath === path ? "font-bold underline" : ""
+                } text-3xl p-1`}
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </DrawerContent>
+    </Drawer>
   );
 }
 
