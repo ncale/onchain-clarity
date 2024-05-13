@@ -4,9 +4,8 @@ import { useState } from "react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Image } from "@nextui-org/react";
+import Image from "next/image";
 import HamburgerIcon from "./icons/hamburger-icon";
-import { NavbarItem } from "@nextui-org/react";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 
 export function NavLogo() {
@@ -16,6 +15,7 @@ export function NavLogo() {
       src="/images/occ-logo.png"
       alt="Onchain clarity logo"
       height={80}
+      width={80}
       className="h-16"
     />
   ) : null;
@@ -29,9 +29,9 @@ export function NavLinks() {
 function DesktopMenu() {
   const currentPath = usePathname();
   return menuLinks.map(([name, path], i) => (
-    <NavbarItem className={currentPath === path ? "text-blue-500" : ""} key={i}>
+    <div className={currentPath === path ? "text-blue-500" : ""} key={i}>
       <Link href={path}>{name}</Link>
-    </NavbarItem>
+    </div>
   ));
 }
 
