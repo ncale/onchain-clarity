@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Header } from "./header";
 
 const font = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Onchain Clarity",
   description:
-    "Bringing higher visibility to blockchain by providing a number of web3 services related to social, governance, and more.",
+    "Building transparency and accountability with innovative solutions for the future of the web.",
 };
 
 export default function RootLayout({
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} border-box`}>{children}</body>
+      <body className={`${font.className} border-box px-32 pt-8`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
