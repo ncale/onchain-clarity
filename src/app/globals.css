@@ -74,39 +74,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-.main {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 88%;
-  height: 100vh;
-}
-
-@media (min-width: 768px) {
-  .main {
-    width: 50rem;
-  }
-}
-
-.role-list {
-  list-style-type: disc;
-  margin-left: 1rem;
-}
-
-.role-list > li {
-  font-weight: 100;
-  font-size: small;
-}
-
-.footer {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  height: 2rem;
-  bottom: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: inherit;
-}
