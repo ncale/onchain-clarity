@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Providers from "@/app/providers";
 
 const font = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -18,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} border-box`}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={`${font.className} border-box`}>{children}</body>
     </html>
   );
 }
