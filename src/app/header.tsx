@@ -4,14 +4,14 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <div className="flex justify-between">
+    <div className="flex items-end justify-between leading-none">
       {/* Logo */}
       <div>
-        <span>Onchain Clarity Company</span>
+        <span className="text-xl font-[600]">Onchain Clarity Company</span>
       </div>
 
       {/* Nav */}
-      <nav className="flex space-x-2">
+      <nav className="text-md flex space-x-2">
         {/* Links */}
         <ul>
           {links.map((route, i) => (
