@@ -6,14 +6,16 @@ import { scrolltoHash } from "@/lib/utils";
 
 export function Header() {
   return (
-    <header className="flex items-end justify-between px-32 leading-none">
+    <header className="flex items-end justify-between px-32 text-xl leading-none">
       {/* Logo */}
       <div>
-        <span className="text-xl font-[600]">Onchain Clarity Company</span>
+        <span className="font-[600] tracking-wide">
+          Onchain Clarity Company
+        </span>
       </div>
 
       {/* Nav */}
-      <nav className="text-md flex space-x-2">
+      <nav className="flex items-center space-x-3">
         {/* Links */}
         <ul>
           {links.map((route, i) => (
@@ -33,7 +35,7 @@ export function Header() {
         <div>{" | "}</div>
 
         {/* Socials */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-3">
           <a href="https://warpcast.com/occ.eth" target="_blank">
             <IconFarcaster />
           </a>
