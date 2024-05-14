@@ -64,7 +64,7 @@ export default function Home() {
         {/* Cards */}
         <div className="mx-40 grid grid-cols-3 gap-8">
           {initiativesList.map((item, i) => (
-            <Card className="col-span-2 even:col-start-2">
+            <Card key={i} className="col-span-2 even:col-start-2">
               <CardHeader className="space-y-2">
                 <CardTitle>{item.title}</CardTitle>
                 <CardDescription>{item.desc}</CardDescription>
