@@ -1,10 +1,12 @@
+"use client";
+
 import IconFarcaster from "@/components/icons/farcaster";
 import IconX from "@/components/icons/x";
-import Link from "next/link";
+import { scrolltoHash } from "@/lib/utils";
 
 export function Header() {
   return (
-    <div className="flex items-end justify-between leading-none">
+    <header className="flex items-end justify-between px-32 leading-none">
       {/* Logo */}
       <div>
         <span className="text-xl font-[600]">Onchain Clarity Company</span>
@@ -15,8 +17,13 @@ export function Header() {
         {/* Links */}
         <ul>
           {links.map((route, i) => (
-            <li id={i.toString()} className="inline">
-              <Link href={route.href}>{route.name}</Link>
+            <li key={i} className="inline">
+              <span
+                className="cursor-pointer hover:underline"
+                onClick={() => scrolltoHash(route.elementId)}
+              >
+                {route.name}
+              </span>
               {i + 1 === links.length ? "" : "・"}
             </li>
           ))}
@@ -35,13 +42,13 @@ export function Header() {
           </a>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
 
-type LinksType = { name: string; href: `#${string}` }[];
+type LinksType = { name: string; elementId: string }[];
 const links: LinksType = [
-  { name: "Home", href: "#home" },
-  { name: "Initiatives", href: "#initiatives" },
-  { name: "Team", href: "#team" },
+  { name: "Home", elementId: "home" },
+  { name: "Initiatives", elementId: "initiatives" },
+  { name: "Team", elementId: "team" },
 ];
