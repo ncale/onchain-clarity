@@ -1,7 +1,5 @@
 export default function Footer() {
-	return (
-		<footer className="footer">
-			<small>Onchain Clarity Co.</small>
-		</footer>
-	)
+  return (
+    <footer className="absolute bottom-0 left-0 h-28 w-full rounded-t-2xl bg-zinc-700"></footer>
+  );
 }

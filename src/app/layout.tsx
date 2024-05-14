@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "./header";
+import Footer from "@/components/footer";
 
 const font = Open_Sans({
   subsets: ["latin"],
@@ -22,11 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${font.variable} border-box max-w-[960px] mx-auto px-32 pt-8 font-main`}
-      >
+      <body className={`${font.variable} border-box relative pt-8 font-main`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
