@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
+import { Header } from "./header";
 import Footer from "@/components/footer";
-import Providers from "@/app/providers";
 
-const font = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
+const font = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-main",
+});
 
 export const metadata: Metadata = {
   title: "Onchain Clarity",
-  description: "Bringing higher visibility to blockchain by providing a number of web3 services related to social, governance, and more.",
+  description:
+    "Building transparency and accountability with innovative solutions for the future of the web.",
 };
 
 export default function RootLayout({
@@ -18,13 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${font.className} border-box`}>
-        <Providers>
-          <Header />
-					{children}
-					<Footer />
-        </Providers>
+    <html lang="en">
+      <body className={`${font.variable} border-box relative pt-8 font-main`}>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
