@@ -29,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.variable} ${font_title.variable} border-box relative pt-8 font-main`}
+        className={`${font.variable} ${font_title.variable} border-box relative font-main`}
       >
-        <div className="mx-auto max-w-[1360px]">
+        <div className="relative mx-auto max-w-[1360px]">
+          <Lines />
           <Header />
           {children}
           <Footer />
@@ -40,3 +41,10 @@ export default function RootLayout({
     </html>
   );
 }
+
+const Lines = () => (
+  <>
+    <div className="absolute left-0 top-0 z-[100] mx-8 h-full border-x border-gray-400" />
+    <div className="absolute right-0 top-0 z-[100] mx-8 h-full border-x border-gray-400" />
+  </>
+);

@@ -6,14 +6,14 @@ import { scrolltoHash } from "@/lib/utils";
 
 export function Header() {
   return (
-    <header className="flex items-end justify-between px-32 text-xl leading-none">
+    <header className="flex items-end justify-between bg-gray-100 px-16 pb-8 pt-6 leading-none">
       {/* Logo */}
       <div>
-        <span className="font-title">Onchain Clarity Company</span>
+        <span className="font-title text-xl">Onchain Clarity Company</span>
       </div>
 
       {/* Nav */}
-      <nav className="flex items-center space-x-3">
+      <nav className="flex items-center space-x-3 text-lg">
         {/* Links */}
         <ul>
           {links.map((route, i) => (
