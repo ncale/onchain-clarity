@@ -44,7 +44,7 @@ export default function RootLayout({
 
 const Lines = () => (
   <>
-    <div className="absolute left-0 top-0 z-[100] mx-8 h-full border-x border-gray-400" />
-    <div className="absolute right-0 top-0 z-[100] mx-8 h-full border-x border-gray-400" />
+    <div className="absolute left-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 md:block" />
+    <div className="absolute right-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 md:block" />
   </>
 );
