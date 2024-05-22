@@ -9,9 +9,7 @@ export function Header() {
     <header className="flex items-end justify-between px-32 text-xl leading-none">
       {/* Logo */}
       <div>
-        <span className="font-[600] tracking-wide">
-          Onchain Clarity Company
-        </span>
+        <span className="font-title">Onchain Clarity Company</span>
       </div>
 
       {/* Nav */}

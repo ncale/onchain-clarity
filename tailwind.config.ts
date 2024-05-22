@@ -59,6 +59,7 @@ const config = {
       },
       fontFamily: {
         main: ["var(--font-main)"],
+        title: ["var(--font-title)"],
       },
       keyframes: {
         "accordion-down": {

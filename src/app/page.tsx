@@ -19,13 +19,13 @@ export default function Home() {
   return (
     <main className="[&>*]:px-32">
       {/* Hero Section */}
-      <section id="home" className="relative h-[85dvh]">
+      <section id="home" className="relative h-[60dvh]">
         {/* Hero */}
-        <div className="grid grid-cols-2 items-center gap-4">
+        <div className="grid grid-cols-2 items-center gap-24">
           {/* Text */}
           <div className="space-y-6">
-            <h1 className="text-5xl">Onchain is the new online</h1>
-            <p className="text-3xl">
+            <h1 className="font-title text-5xl">Onchain is the new online</h1>
+            <p className="text-2xl">
               Building transparency and accountability with innovative solutions
               for the future of the web
             </p>
