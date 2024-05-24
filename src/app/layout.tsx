@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${font.variable} ${font_title.variable} border-box relative font-main`}
       >
-        <div className="relative mx-auto max-w-[1360px]">
+        <div className="relative mx-auto max-w-[1260px]">
           <Lines />
           <Header />
           {children}
@@ -44,7 +44,7 @@ export default function RootLayout({
 
 const Lines = () => (
   <>
-    <div className="absolute left-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 md:block" />
-    <div className="absolute right-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 md:block" />
+    <div className="absolute left-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 lg:block" />
+    <div className="absolute right-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 lg:block" />
   </>
 );
