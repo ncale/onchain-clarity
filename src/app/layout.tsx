@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Major_Mono_Display, Golos_Text } from "next/font/google";
 import "./globals.css";
 import { Header } from "./header";
 import Footer from "@/components/footer";
 
-const font = Open_Sans({
+const font = Golos_Text({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "700"],
   variable: "--font-main",
+});
+const font_title = Major_Mono_Display({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-title",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +28,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.variable} border-box relative pt-8 font-main`}>
-        <Header />
-        {children}
-        <Footer />
+      <body
+        className={`${font.variable} ${font_title.variable} border-box relative font-main`}
+      >
+        <div className="relative mx-auto max-w-[1260px]">
+          <Lines />
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
 }
+
+const Lines = () => (
+  <>
+    <div className="absolute left-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 lg:block" />
+    <div className="absolute right-0 top-0 z-[100] mx-8 hidden h-full border-x border-gray-400 lg:block" />
+  </>
+);

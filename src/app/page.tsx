@@ -14,20 +14,29 @@ import {
 } from "@/components/ui/card";
 import { scrolltoHash } from "@/lib/utils";
 import IconLink from "@/components/icons/link";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { InlinePill } from "@/components/ui/inline-pill";
 
 export default function Home() {
   return (
-    <main className="[&>*]:px-32">
+    <main className="lg:[&>*]:px-32">
       {/* Hero Section */}
-      <section id="home" className="relative h-[85dvh]">
+      <section id="home" className="relative space-y-24 pb-10 pt-8">
         {/* Hero */}
-        <div className="grid grid-cols-2 items-center gap-4">
+        <div className="grid grid-cols-1 items-center gap-0 px-4 lg:grid-cols-2 lg:gap-24 lg:px-0">
           {/* Text */}
           <div className="space-y-6">
-            <h1 className="text-5xl">Onchain is the new online</h1>
-            <p className="text-3xl">
-              Building transparency and accountability with innovative solutions
-              for the future of the web
+            <h1 className="font-title text-6xl">Onchain is the new online</h1>
+            <p className="text-2xl leading-10">
+              Building{" "}
+              <InlinePill className="bg-amber-100 leading-8 text-amber-800">
+                transparency
+              </InlinePill>{" "}
+              and{" "}
+              <InlinePill className="bg-lime-100 leading-8 text-lime-800">
+                accountability
+              </InlinePill>{" "}
+              with innovative solutions for the future of the web
             </p>
           </div>
           {/* Image */}
@@ -42,7 +51,7 @@ export default function Home() {
           </div>
         </div>
         {/* Divider */}
-        <div className="mx-auto w-fit">
+        <div className="mx-auto hidden w-fit lg:block">
           <div
             onClick={() => scrolltoHash("initiatives")}
             className="flex cursor-pointer flex-col items-center"
@@ -57,78 +66,133 @@ export default function Home() {
       {/* Initiatives Section */}
       <section
         id="initiatives"
-        className="relative space-y-12 bg-zinc-100 pb-48 pt-16"
+        className="relative space-y-12 bg-zinc-100 pb-36 pt-10"
       >
         {/* Title */}
-        <h2 className="text-4xl">Our initiatives</h2>
+        <h2 className="px-4 text-4xl">Our initiatives</h2>
         {/* Cards */}
-        <div className="mx-40 grid grid-cols-3 gap-8">
-          {initiativesList.map((item, i) => (
-            <Card key={i} className="col-span-2 even:col-start-2">
-              <CardHeader className="space-y-2">
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.desc}</CardDescription>
-              </CardHeader>
-              <CardFooter className="flex justify-end">
-                <a
-                  href={item.link}
-                  className="flex -translate-x-4 items-center space-x-1 text-lg duration-75 ease-in-out hover:translate-x-0"
-                >
-                  <div>See more</div>
-                  <MoveRight />
-                </a>
-              </CardFooter>
-            </Card>
-          ))}
+        <div className="flex flex-col-reverse gap-8 px-4 lg:grid lg:grid-cols-3">
+          <div className="grid grid-cols-10 gap-8 lg:col-span-2">
+            {initiativesList.map((item, i) => (
+              <Card key={i} className="col-span-9 px-10 py-8 even:col-start-2">
+                <CardHeader className="space-y-2">
+                  <CardTitle>{item.title}</CardTitle>
+                  <CardDescription>{item.desc}</CardDescription>
+                </CardHeader>
+                <CardFooter className="flex justify-end">
+                  <a
+                    href={item.link}
+                    className="flex items-center space-x-1 text-lg hover:underline"
+                  >
+                    <div>See more</div>
+                    <MoveRight />
+                  </a>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+          <div className="space-y-4 text-xl leading-8">
+            <p>
+              {"We're "}
+              <InlinePill className="bg-emerald-100 leading-6 text-emerald-800">
+                🏡 community members
+              </InlinePill>
+              {", "}
+              <InlinePill className="bg-cyan-100 leading-6 text-cyan-800">
+                🛠️ builders
+              </InlinePill>
+              {", and "}
+              <InlinePill className="bg-indigo-100 leading-6 text-indigo-800">
+                ✨ experimentooors
+              </InlinePill>
+              .
+            </p>
+            <p>Check out our latest initiatives here.</p>
+          </div>
         </div>
         {/* Divider */}
         <WavyTransition2 />
       </section>
 
       {/* Team Section */}
-      <section id="team" className="space-y-12 bg-zinc-200 pb-60 pt-20">
+      <section id="team" className="space-y-12 bg-zinc-200 px-4 pb-52 pt-10">
         <h2 className="text-4xl">Meet the team</h2>
-        <div className="mx-20 flex justify-center gap-8">
-          {teamList.map((member, i) => (
-            <Card key={i}>
-              <CardHeader className="space-y-1">
-                <div className="max-h-60 min-w-60 max-w-60 overflow-hidden rounded-lg">
-                  <Image
-                    src={member.image}
-                    width={240}
-                    height={240}
-                    alt={`${member.name} profile picture`}
-                    className=""
-                  />
-                </div>
-                <CardTitle className="text-xl">{member.name}</CardTitle>
-                <CardDescription className="leading-none text-zinc-400">
-                  {member.role}
-                </CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <div className="flex items-center text-xl">
-                  <a href={member.linkX} target="_blank">
-                    <IconX />
-                  </a>
-                  <a
-                    href={member.linkFarcaster}
-                    target="_blank"
-                    className="ml-1.5"
-                  >
-                    <IconFarcaster />
-                  </a>
-                  <a
-                    href={member.linkWebsite}
-                    target="_blank"
-                    className="ml-0.5"
-                  >
-                    <IconLink />
-                  </a>
-                </div>
-              </CardFooter>
-            </Card>
-          ))}
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-3">
+          <div className="space-y-4 text-xl leading-8">
+            <p>
+              {"We're also "}
+              <InlinePill className="bg-cyan-100 leading-6 text-cyan-800">
+                {"collaborators"}
+              </InlinePill>
+              {", "}
+              <InlinePill className="bg-lime-100 leading-6 text-lime-800">
+                {"hard workers"}
+              </InlinePill>
+              {", and "}
+              <InlinePill className="bg-pink-100 leading-6 text-pink-800">
+                {"thinkers"}
+              </InlinePill>
+              {
+                "⎯constantly trying new things and searching for what we don't know."
+              }
+            </p>
+            <p>
+              {"The best way to reach onchain clarity is by "}
+              <a
+                href="mailto:contact@onchainclarity.co"
+                className="text-blue-500 underline hover:text-blue-400 active:text-blue-600"
+              >
+                {"email"}
+              </a>
+              {"."}
+            </p>
+          </div>
+          <div className="flex justify-center gap-4 lg:col-span-2 lg:justify-start">
+            {teamList.map((member, i) => (
+              <Card key={i} className="w-min p-6">
+                <CardHeader className="space-y-1">
+                  <div className="w-28 overflow-hidden rounded-md lg:w-48">
+                    <AspectRatio ratio={1} className="relative">
+                      <Image
+                        src={member.image}
+                        width={240}
+                        height={240}
+                        alt={`${member.name} profile picture`}
+                        className={`absolute ${member.name === "ncale.eth (a.k.a. Nick)" ? "-top-7" : ""} object-cover`}
+                      />
+                    </AspectRatio>
+                  </div>
+                  <CardTitle className="text-md">{member.name}</CardTitle>
+                  <CardDescription className="leading-none text-zinc-400">
+                    {member.role}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <div className="flex items-center">
+                    <a href={member.linkX} target="_blank">
+                      <IconX />
+                    </a>
+                    <a
+                      href={member.linkFarcaster}
+                      target="_blank"
+                      className="ml-1.5"
+                    >
+                      <IconFarcaster />
+                    </a>
+                    {member.linkWebsite ? (
+                      <a
+                        href={member.linkWebsite}
+                        target="_blank"
+                        className="ml-0.5"
+                      >
+                        <IconLink />
+                      </a>
+                    ) : null}
+                  </div>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
     </main>
@@ -213,3 +277,7 @@ function WavyTransition2() {
     </div>
   );
 }
+
+// We pursue
+// challenges and value hard lessons. We're trying to make a
+// difference.

@@ -6,18 +6,18 @@ import { scrolltoHash } from "@/lib/utils";
 
 export function Header() {
   return (
-    <header className="flex items-end justify-between px-32 text-xl leading-none">
+    <header className="flex items-end justify-between bg-gray-100 px-4 pb-5 pt-5 leading-none lg:px-16 lg:pb-8">
       {/* Logo */}
       <div>
-        <span className="font-[600] tracking-wide">
-          Onchain Clarity Company
+        <span className="font-title text-xl">
+          Onchain Clarity <span className="hidden lg:inline">Company</span>
         </span>
       </div>
 
       {/* Nav */}
-      <nav className="flex items-center space-x-3">
+      <nav className="flex items-center space-x-3 text-lg">
         {/* Links */}
-        <ul>
+        <ul className="hidden lg:block">
           {links.map((route, i) => (
             <li key={i} className="inline">
               <span
@@ -32,7 +32,7 @@ export function Header() {
         </ul>
 
         {/* Divider */}
-        <div>{" | "}</div>
+        <div className="hidden lg:block">{" | "}</div>
 
         {/* Socials */}
         <div className="flex items-center space-x-3">
