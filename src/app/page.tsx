@@ -120,30 +120,31 @@ export default function Home() {
         <div className="flex flex-col gap-8 lg:grid lg:grid-cols-3">
           <div className="space-y-4 text-xl leading-8">
             <p>
-              We're also{" "}
+              {"We're also "}
               <InlinePill className="bg-cyan-100 leading-6 text-cyan-800">
-                collaborators
+                {"collaborators"}
               </InlinePill>
-              ,{" "}
+              {", "}
               <InlinePill className="bg-lime-100 leading-6 text-lime-800">
-                hard workers
+                {"hard workers"}
               </InlinePill>
-              , and{" "}
+              {", and "}
               <InlinePill className="bg-pink-100 leading-6 text-pink-800">
-                thinkers
+                {"thinkers"}
               </InlinePill>
-              ⎯constantly trying new things and searching for what we don't
-              know.
+              {
+                "⎯constantly trying new things and searching for what we don't know."
+              }
             </p>
             <p>
-              The best way to reach onchain clarity is by{" "}
+              {"The best way to reach onchain clarity is by "}
               <a
                 href="mailto:contact@onchainclarity.co"
                 className="text-blue-500 underline hover:text-blue-400 active:text-blue-600"
               >
-                email
+                {"email"}
               </a>
-              .
+              {"."}
             </p>
           </div>
           <div className="flex justify-center gap-4 lg:col-span-2 lg:justify-start">
