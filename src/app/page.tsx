@@ -209,7 +209,12 @@ const initiativesList: InitiativesListType = [
   {
     title: "GovScore",
     desc: "We're building solutions for delegate discovery and analytics in DAOs.",
-    link: "https://govscore.xyz",
+    link: "https://opgovscore.com",
+  },
+  {
+    title: "WannaBet🤝",
+    desc: "We're creating products with novel onchain features that like peer-to-peer escrow accounts.",
+    link: "https://wannabet.cc/",
   },
 ];
 
